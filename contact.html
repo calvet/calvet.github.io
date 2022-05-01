@@ -60,7 +60,8 @@
             <div class="row cont-main-top">
                <!-- contact form -->
                <div class="contacts12-main col-lg-6 ">
-                <form action="https://formspree.io/f/mayvllvd" method="post" class="main-input">
+                   <p id="my-form-status"></p>
+                <form action="https://formspree.io/f/mayvllvd" method="post" id="contact-form" class="main-input">
                     <div class="top-inputs d-grid">
                         <input type="text" placeholder="Seu Nome Completo" name="w3lName" id="w3lName" required="">
                     </div>
@@ -195,7 +196,38 @@
 
 <!-- Smooth scrolling -->
 
+<script>
+    var form = document.getElementById("contact-form");
 
+    async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                status.innerHTML = "Obrigado pelo seu contato! Em breve você será respondido.";
+                form.reset()
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                    } else {
+                        status.innerHTML = "Erro! Aconteceu algum problema ao enviar seu contato. Tente novamente!"
+                    }
+                })
+            }
+        }).catch(error => {
+            status.innerHTML = "Erro! Aconteceu algum problema ao enviar seu contato. Tente novamente!"
+        });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
 
 </body>
 
