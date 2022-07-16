@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title>Calvet Softwares | Contato</title>
     <!-- web fonts -->
     <link href="//fonts.googleapis.com/css?family=Nunito:400,600,700,800,900&display=swap" rel="stylesheet">
@@ -14,7 +13,6 @@
     <link rel="stylesheet" href="assets/css/style-starter.css">
 </head>
 <body>
-
 <section class="w3l-bootstrap-header">
   <nav class="navbar navbar-expand-lg navbar-light py-lg-3 py-2">
     <div class="container">
@@ -24,7 +22,7 @@
         <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
     </a> -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Ocultar navegação">
         <span class="navbar-toggler-icon fa fa-bars"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -60,16 +58,18 @@
             <div class="row cont-main-top">
                <!-- contact form -->
                <div class="contacts12-main col-lg-6 ">
-                   <p id="my-form-status"></p>
+                   <div id="contact-form-alert"></div>
                 <form action="https://formspree.io/f/mayvllvd" method="post" id="contact-form" class="main-input">
                     <div class="top-inputs d-grid">
-                        <input type="text" placeholder="Seu Nome Completo" name="w3lName" id="w3lName" required="">
+                        <input type="text" placeholder="Seu Nome Completo" name="contact-name" id="contact-name" required>
                     </div>
                     <div class="top-inputs d-grid">
-                        <input type="text" name="telephone" placeholder="Seu Telefone ou Celular" id="w3lSender">
+                        <input type="text" name="contact-telephone" placeholder="Seu Telefone ou Celular" id="contact-phone">
                     </div>
-                    <input type="email" name="email" placeholder="Seu Email" id="w3lSender" required="">
-                    <textarea placeholder="Sua Mensagem" name="w3lMessage" id="w3lMessage" required=""></textarea>
+                    <div class="top-inputs d-grid">
+                        <input type="email" name="contact-email" placeholder="Seu Email" id="contact-email" required>
+                    </div>
+                    <textarea placeholder="Sua Mensagem" name="contact-text" id="contact-text" minlength="15" maxlength="300" required></textarea>
                     <div class="text-right">
                         <button type="submit" class="btn btn-theme2">Enviar Contato</button>
                     </div>
@@ -139,45 +139,44 @@
           <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
           <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
           <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
-          <a href="#google-plus" class="google-plus"><span class="fa fa-google-plus"></span></a>
+          <a href="https://github.com/calvet/" target="_blank" class="github"><span class="fa fa-gihub"></span></a>
           <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
       </div>
           <div class="bottom-copies text-center">
-              <p class="copy-footer-29">© 2022 Calvet Softwares - CNPJ 34.387.347/0001-50 | Todos os direitos reservados. | Designed by <a href="https://w3layouts.com">W3layouts</a></p>
+              <p class="copy-footer-29">© 2022 Calvet Softwares - CNPJ 34.387.347/0001-50 | Todos os direitos reservados | Designed by <a href="https://w3layouts.com">W3layouts</a></p>
           </div>
       </div>
   </div>
    <!-- move top -->
-  <button onclick="topFunction()" id="movetop" title="Go to top">
-              <span class="fa fa-angle-up"></span>
-                 </button>
-                 <script>
-                     // When the user scrolls down 20px from the top of the document, show the button
-                     window.onscroll = function () {
-                         scrollFunction()
-                     };
-              
-                     function scrollFunction() {
-                         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                             document.getElementById("movetop").style.display = "block";
-                         } else {
-                             document.getElementById("movetop").style.display = "none";
-                         }
-                     }
-              
-                     // When the user clicks on the button, scroll to the top of the document
-                     function topFunction() {
-                         document.body.scrollTop = 0;
-                         document.documentElement.scrollTop = 0;
-                     }
-                 </script>
-                 <!-- /move top -->
+  <button onclick="topFunction()" id="movetop" title="Ir ao topo">
+      <span class="fa fa-angle-up"></span>
+         </button>
+         <script>
+             // When the user scrolls down 20px from the top of the document, show the button
+             window.onscroll = function () {
+                 scrollFunction()
+             };
+
+             function scrollFunction() {
+                 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                     document.getElementById("movetop").style.display = "block";
+                 } else {
+                     document.getElementById("movetop").style.display = "none";
+                 }
+             }
+
+             // When the user clicks on the button, scroll to the top of the document
+             function topFunction() {
+                 document.body.scrollTop = 0;
+                 document.documentElement.scrollTop = 0;
+             }
+         </script>
+         <!-- /move top -->
 </section>
 <!-- // grids block 5 -->
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <!-- //footer-28 block -->
 </section>
-
 <script>
     $(function () {
       $('.navbar-toggler').click(function () {
@@ -189,20 +188,18 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
   </script>
-  
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
-
 <!-- Smooth scrolling -->
-
 <script>
-    var form = document.getElementById("contact-form");
+    let form = document.getElementById('contact-form');
 
     async function handleSubmit(event) {
         event.preventDefault();
-        var status = document.getElementById("my-form-status");
-        var data = new FormData(event.target);
+        let status = document.getElementById('contact-form-alert');
+        let data = new FormData(event.target);
+
         fetch(event.target.action, {
             method: form.method,
             body: data,
@@ -211,27 +208,26 @@
             }
         }).then(response => {
             if (response.ok) {
-                status.innerHTML = "Obrigado pelo seu contato! Em breve você será respondido.";
+                //status.innerHTML = 'Obrigado pelo seu contato! Em breve você será respondido.';
+                status.innerHTML = '<div class="alert alert-success" role="alert">Obrigado pelo seu contato! Em breve você será respondido.</div>';
                 form.reset()
             } else {
                 response.json().then(data => {
                     if (Object.hasOwn(data, 'errors')) {
-                        status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                        status.innerHTML = '<div class="alert alert-danger" role="alert">' + data["errors"].map(error => error["message"]).join(", ") + '</div>';
+                        //status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
                     } else {
-                        status.innerHTML = "Erro! Aconteceu algum problema ao enviar seu contato. Tente novamente!"
+                        status.innerHTML = '<div class="alert alert-danger" role="alert">Erro! Aconteceu algum problema ao enviar seu contato. Tente novamente!</div>';
+                        //status.innerHTML = 'Erro! Aconteceu algum problema ao enviar seu contato. Tente novamente!';
                     }
                 })
             }
         }).catch(error => {
-            status.innerHTML = "Erro! Aconteceu algum problema ao enviar seu contato. Tente novamente!"
+            status.innerHTML = '<div class="alert alert-danger" role="alert">Erro! Aconteceu algum problema ao enviar seu contato. Tente novamente!</div>';
+            //status.innerHTML = 'Erro! Aconteceu algum problema ao enviar seu contato. Tente novamente!';
         });
     }
-    form.addEventListener("submit", handleSubmit)
+    form.addEventListener('submit', handleSubmit)
 </script>
-
 </body>
-
 </html>
-<!-- // grids block 5 -->
-
-
